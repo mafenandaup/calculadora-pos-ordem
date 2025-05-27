@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Calculadora EDADOS</title>
+    <title>Calculadora Pós-Fixada</title>
 </head>
 <body>
-
+    <h1>Calculadora Pós-Fixada</h1>
+    <form action="/calculadora/calcular" method="post">
+        <input type="text" name="expressao" placeholder="Digite a expressão pós-fixada">
+        <button type="submit">Calcular</button>
+    </form>
 </body>
 </html>
