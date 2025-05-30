@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculadoraServiceTests {
+public class CalculadoraServiceTests{
 
     private CalculadoraService calculadora;
 
@@ -43,7 +43,7 @@ public class CalculadoraServiceTests {
     }
 
     @Test
-    void erroDivisaoZero() {
+    void verificaDivisaoZero() {
         String expressao = "4 0 /";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calculadora.calcular(expressao);
@@ -52,7 +52,7 @@ public class CalculadoraServiceTests {
     }
 
     @Test
-    void deveLancarErroQuandoOperandosInsuficientes() {
+    void verificaOperandosInsuficientes() {
         String expressao = "5 +";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calculadora.calcular(expressao);
@@ -61,7 +61,7 @@ public class CalculadoraServiceTests {
     }
 
     @Test
-    void deveLancarErroQuandoOperadorInvalido() {
+    void verificaOperadorInvalido() {
         String expressao = "2 3 &";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calculadora.calcular(expressao);
@@ -70,7 +70,7 @@ public class CalculadoraServiceTests {
     }
 
     @Test
-    void deveLancarErroQuandoOperandosExcedentes() {
+    void verificaOperandosExcedentes() {
         String expressao = "2 3 4 +";
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calculadora.calcular(expressao);
