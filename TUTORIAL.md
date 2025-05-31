@@ -66,35 +66,36 @@ URL padrão: http://localhost:8080.
 
 ### Exemplo de Entrada Válida
 
-Entrada: 3 4 + 5 *
-Cálculo: (3 + 4) * 5
-Saída Esperada: 35
+- Entrada: 3 4 + 5 *
+- Cálculo: (3 + 4) * 5
+- Saída Esperada: 35
 
-Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
-Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
-Saída Esperada: 5
+- Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
+- Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
+- Saída Esperada: 5
 
 ### Exemplos de Falhas
 
-Divisão por zero:
-Entrada: 10 0 /
-Erro: "Erro: Divisão por zero não permitida."
+- Divisão por zero:
+- Entrada: 10 0 /
+- Erro: "Erro: Divisão por zero não permitida."
 
 ### Operadores inválidos:
 
-Entrada: 3 4 &
-Erro: "Erro: Operador inválido '&'."
-Operandos insuficientes:
+- Entrada: 3 4 &
+- Erro: "Erro: Operador inválido '&'."
 
-Entrada: 4 +
-Erro: "Erro: Operandos insuficientes para o operador '+'."
+### Operandos insuficientes:
+
+- Entrada: 4 +
+- Erro: "Erro: Operandos insuficientes para o operador '+'."
 
 ###  Operandos excedentes:
 
-Entrada: 4 5 6 +
-Erro: "Erro: Expressão inválida, operandos excedentes."
+- Entrada: 4 5 6 +
+- Erro: "Erro: Expressão inválida, operandos excedentes."
 
-##Tutorial de Funcionamento
+## Tutorial de Funcionamento
 
 Acesse a aplicação pelo navegador na URL padrão.
 
