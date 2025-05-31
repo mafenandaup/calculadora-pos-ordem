@@ -66,9 +66,11 @@ URL padrão: http://localhost:8080.
 
 ### Exemplo de Entrada Válida
 
-- Entrada: 3 4 + 5 *
-- Cálculo: (3 + 4) * 5
-- Saída Esperada: 35
+```bash
+Entrada: 3 4 + 5 *
+Cálculo: (3 + 4) * 5
+Saída Esperada: 35
+```
 
 - Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
 - Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
