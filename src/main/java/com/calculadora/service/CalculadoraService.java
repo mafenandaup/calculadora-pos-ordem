@@ -20,17 +20,17 @@ public class CalculadoraService {
 
         // Etapa 2: Processa os tokens da fila
         while (!fila.isVazia()) {
-            String token = fila.dequeue();
+            String token = fila.dequeue(); //Insere um token do vetor na fila
 
-            if (isNumero(token)) {
+            if (isNumero(token)) { // Verifica se é um número (double)
                 double valor = Double.parseDouble(token);
-                if (pilha.isCheia()) throw new RuntimeException("Pilha Cheia");
+                if (pilha.isCheia()) throw new RuntimeException("Pilha Cheia"); //Tratamento de erro quando a pila está cheia
                 pilha.push(valor);
             } else if (isOperadorValido(token)) {
-                if (pilha.getQuantidade() < 2)
+                if (pilha.getQuantidade() < 2) // Se a quantia de tokens for menor que 2 a operação não será válida.
                     throw new RuntimeException("Operandos Insuficientes");
 
-                double b = pilha.pop();
+                double b = pilha.pop(); // 
                 double a = pilha.pop();
                 double resultado;
 
@@ -76,6 +76,6 @@ public class CalculadoraService {
     }
 
     private boolean isOperadorValido(String token) {
-        return token.matches("[\\+\\-\\*/%]");
+        return token.matches("[\\+\\-\\*/%]"); // verifica se a string equivale aos tokens de operadores (soma, subtração, etc)
     }
 }
