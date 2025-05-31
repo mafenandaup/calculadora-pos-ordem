@@ -54,11 +54,55 @@ mvn spring-boot:run
 
 2. Execute a classe principal CalcPosOrdemApplication.
 
-3. Acesse a aplicação
+3. Verifique se todas as dependências estão devidamente instaladas.
+
+4. Acesse a aplicação por meio do link em seu navegador
 
 ```bash
 URL padrão: http://localhost:8080.
 ```
+
+# Como Testar a Aplicação
+
+### Exemplo de Entrada Válida
+
+Entrada: 3 4 + 5 *
+Cálculo: (3 + 4) * 5
+Saída Esperada: 35
+
+Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
+Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
+Saída Esperada: 5
+
+### Exemplos de Falhas
+
+Divisão por zero:
+Entrada: 10 0 /
+Erro: "Erro: Divisão por zero não permitida."
+
+### Operadores inválidos:
+
+Entrada: 3 4 &
+Erro: "Erro: Operador inválido '&'."
+Operandos insuficientes:
+
+Entrada: 4 +
+Erro: "Erro: Operandos insuficientes para o operador '+'."
+
+###  Operandos excedentes:
+
+Entrada: 4 5 6 +
+Erro: "Erro: Expressão inválida, operandos excedentes."
+
+##Tutorial de Funcionamento
+
+Acesse a aplicação pelo navegador na URL padrão.
+
+Insira a expressão na notação pós-fixada no campo de texto.
+
+Clique no botão "Calcular".
+
+Veja o resultado ou a mensagem de erro exibida na tela.
 
 ## Contato
 Projeto desenvolvido por **Maria Fernanda Maia e Rian Benedito Martins de Araujo** -
