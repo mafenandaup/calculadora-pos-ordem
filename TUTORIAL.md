@@ -71,31 +71,39 @@ Entrada: 3 4 + 5 *
 Cálculo: (3 + 4) * 5
 Saída Esperada: 35
 ```
-
-- Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
-- Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
-- Saída Esperada: 5
+```bash
+Entrada: 15 7 1 1 + - / 3 * 2 1 1 + + -
+Cálculo: 15 / (7 - (1 + 1)) * 3 - (2 + (1 + 1))
+Saída Esperada: 5
+```
 
 ### Exemplos de Falhas
 
+```bash
 - Divisão por zero:
 - Entrada: 10 0 /
 - Erro: "Erro: Divisão por zero não permitida."
+```
 
 ### Operadores inválidos:
 
+```bash
 - Entrada: 3 4 &
 - Erro: "Erro: Operador inválido '&'."
-
+```
 ### Operandos insuficientes:
 
+```bash
 - Entrada: 4 +
 - Erro: "Erro: Operandos insuficientes para o operador '+'."
+```
 
 ###  Operandos excedentes:
 
+```bash
 - Entrada: 4 5 6 +
 - Erro: "Erro: Expressão inválida, operandos excedentes."
+```
 
 ## Tutorial de Funcionamento
 
