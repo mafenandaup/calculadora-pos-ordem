@@ -5,11 +5,21 @@
     <title>Calculadora Pós-Fixada</title>
 </head>
 <body>
-<section class="container">
-    <h1>Tá commitando né</h1>
-    <form action="">
-    
-    </form>
-</section>
+    <section class="container">
+        <h1>Calculadora Pós-Ordem</h1>
+        <form th:action="@{/calcular}" method="post">
+            <input type="text" name="expressao" placeholder="Ex.: 3 4 + 5 *" required>
+            <button type="submit">Calcular</button>
+        </form>
+
+        <!-- Exibe o resultado -->
+        <h2 th:if="${resultado != null}">Resultado: <span th:text="${resultado}"></span></h2>
+
+        <!-- Exibe mensagens de erro -->
+        <h2 th:if="${erro != null}" style="color: red;" class="error-text">Erro: <span th:text="${erro}"></span></h2>
+    </section>
+</body>
+</html>
+
 </body>
 </html>
