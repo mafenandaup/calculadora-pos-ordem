@@ -13,7 +13,7 @@ public class CalculadoraService {
 
 	public double calcular(String expressao) {
 		FilaEncadeada<String> fila = criarFila(expressao);
-		PilhaEstatica<Double> pilha = new PilhaEstatica<>(SIZE_PILHA);
+		PilhaEstatica<Double> pilha = new PilhaEstatica<>(SIZE_PILHA); //configura a constante do tamanho da pilha
 
 		processarTokens(fila, pilha);
 
@@ -47,9 +47,9 @@ public class CalculadoraService {
 					throw new RuntimeException("Operandos Insuficientes");
 
 				 double b = pilha.pop();
-	                double a = pilha.pop();
-	                double resultado = executarOperacao(token, a, b);
-	                pilha.push(resultado);
+	                double a = pilha.pop(); // extraindo os 2 números da operação
+	                double resultado = executarOperacao(token, a, b); // chama a função de operações
+	                pilha.push(resultado); // insere o resultado na pilha
             } else {
                 throw new IllegalArgumentException("Token Inválido: " + token);
             }
@@ -59,16 +59,16 @@ public class CalculadoraService {
 		 private double executarOperacao(String operador, double a, double b) {
 		        switch (operador) {
 		            case "+": return a + b;
-		            case "-": return a - b;
+		            case "-": return a - b; // trata diversos casos de operandos
 		            case "*": return a * b;
 		            case "/":
-		                if (b == 0) throw new IllegalArgumentException("Divisão por Zero");
+		                if (b == 0) throw new IllegalArgumentException("Divisão por Zero"); // tratamento de erro: divisão por 0
 		                return a / b;
 		            case "%":
-		                if (b == 0) throw new IllegalArgumentException("Divisão por Zero");
+		                if (b == 0) throw new IllegalArgumentException("Divisão por Zero"); // tratamento de erro: divisão por 0
 		                return a % b;
 		            default:
-		                throw new IllegalArgumentException("Operador Inválido: " + operador);
+		                throw new IllegalArgumentException("Operador Inválido: " + operador); // tratamento de erro: operador inválido
 		        }
 		    }
 
