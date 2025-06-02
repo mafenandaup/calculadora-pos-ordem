@@ -2,12 +2,13 @@
 
 :root {
 	--federal-blue: #03045eff;
-	--marian-blue: #023e8aff;
+	--marian-blue : #023e8aff;
 	--process-cyan: #48acd3ff;
 	--non-photo-blue: #90e0efff;
 	--light-cyan: rgb(169, 213, 222);
 	--baby-powder: rgb(240, 241, 234);
 	--night: #121212ff;
+	--marian-blue: #023e8aff
 }
 
 * {
@@ -38,13 +39,8 @@ body {
 form {
 	display: flex;
 	justify-content: space-around;
-	margin-top: 10px;
-	&&
-	button
-	{
-	padding: 0.3rem;
+	margin-top: 10px; && button { padding : 0.3rem;
 	text-align: center;
-	
 }
 
 }
@@ -57,7 +53,7 @@ p:hover {
 	cursor: not-allowed;
 }
 
-.error-text{
+.error-text {
 	font-size: 1rem;
 	margin-top: 0.5rem
 }

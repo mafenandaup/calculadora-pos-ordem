@@ -19,8 +19,8 @@ public class CalculadoraService {
         String[] tokens = expressao.trim().split("\\s+"); //separa a partir de 1 ou mais espaços em branco
         for (String token : tokens) {
             fila.enqueue(token);
-            
         }
+
 
         // Etapa 2: Processa os tokens da fila
         while (!fila.isVazia()) {
